@@ -3,4 +3,4 @@
 ## Introduction
 This is React app devoted to visualizing sorting algorithms!
 
-{UNDER CONDTRUCTION}
+{UNDER CONSTRUCTION}

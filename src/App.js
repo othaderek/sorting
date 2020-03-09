@@ -1,13 +1,13 @@
 import React from 'react';
-import mergeSort from './sorts/mergeSort.js';
 import './App.css';
+import Container from './components/Container';
 
 
 function App() {
-  console.log(mergeSort([13,12,5,0,-1]));
   
   return (
     <div className="App">
+      <Container />
     </div>
   );
 }

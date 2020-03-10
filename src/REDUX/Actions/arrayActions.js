@@ -1,4 +1,4 @@
-import { RANDOMIZE_ARRAY } from './types';
+import { RANDOMIZE_ARRAY, SORT_ARRAY } from './types';
 import randomizeArray from '../../utility/randomizeArray'
 
 export const randomArray = () => dispatch => {
@@ -7,3 +7,11 @@ export const randomArray = () => dispatch => {
         payload: randomizeArray()
     })
 }
+
+
+// export const sortArray = () => dispatch => {
+//     dispatch({
+//         type: SORT_ARRAY,
+//         payload: 
+//     })
+// }

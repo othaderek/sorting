@@ -8,9 +8,6 @@ import { randomArray } from '../REDUX/Actions/arrayActions'
 export class Container extends Component {
 
     handleClick = (e) => {
-        // console.log(this.props);
-        
-        
         if (e.target.innerText === "Randomize"){
             this.props.randomArray()
         }

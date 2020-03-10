@@ -9,9 +9,9 @@ export const randomArray = () => dispatch => {
 }
 
 
-// export const sortArray = () => dispatch => {
-//     dispatch({
-//         type: SORT_ARRAY,
-//         payload: 
-//     })
-// }
+export const sortArray = array => dispatch => {
+    dispatch({
+        type: SORT_ARRAY,
+        payload: array
+    })
+}

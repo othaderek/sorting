@@ -11,11 +11,11 @@ export class BarContainer extends Component {
         this.props.randomArray()
     }
     render() {
-        // console.log(this.props.array);
+        console.log(this.props.array);
         
 
         const renderBars = () => {
-            if (this.props.array){
+            if (this.props.array.length){
                 return this.props.array.map( i => {
                     return <Bar height={i} />
                 })
@@ -30,7 +30,7 @@ export class BarContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    array: state.array.items
+    array: state.array
 })
 
 

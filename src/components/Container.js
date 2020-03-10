@@ -2,20 +2,28 @@ import React, { Component } from 'react'
 import BarContainer from './BarContainer'
 import Button from './Button'
 import { connect } from 'react-redux';
-import { randomArray } from '../REDUX/Actions/arrayActions'
-// import mergeSort from '../sorts/mergeSort.js';
+import { randomArray, sortArray } from '../REDUX/Actions/arrayActions'
+import mergeSort from '../sorts/mergeSort.js';
 
 export class Container extends Component {
 
     handleClick = (e) => {
+        // console.log(this.props);
+        
         if (e.target.innerText === "Randomize"){
             this.props.randomArray()
+        } else if (e.target.innerText === "Sort"){
+            this.props.sortArray(mergeSort(this.props.array))
+            // animateSort()
+            console.log(this.props.array);
         }
         
     }
 
 
     render() {
+        // console.log(this.props);
+        
         return (
             <div>
                 <BarContainer randomizeArray={null}/>
@@ -27,7 +35,7 @@ export class Container extends Component {
 }
 
 const mapStateToProps = state => ({
-    array: state.array.items
+    array: state.array
 })
 
-export default connect(mapStateToProps, { randomArray })(Container);
+export default connect(mapStateToProps, { randomArray, sortArray })(Container);

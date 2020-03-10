@@ -1,0 +1,2 @@
+export const RANDOMIZE_ARRAY = 'RANDOMIZE_ARRAY';
+export const SORT_ARRAY = 'SORT_ARRAY';

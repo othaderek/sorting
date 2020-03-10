@@ -1,20 +1,37 @@
 import React, { Component } from 'react'
-import mergeSort from '../sorts/mergeSort.js';
+import { connect } from 'react-redux';
+import { randomArray } from '../REDUX/Actions/arrayActions'
+import Bar from './Bar.js'
+import './BarContainer.css'
+
 
 export class BarContainer extends Component {
 
-    state ={
-        randomizedArray: []
+    componentDidMount(){
+        this.props.randomArray()
     }
-
     render() {
+        // console.log(this.props.array);
+        
+
+        const renderBars = () => {
+            if (this.props.array){
+                return this.props.array.map( i => {
+                    return <Bar height={i} />
+                })
+            }
+        }
         return (
             <div id='bar-container'>
-                
+                {renderBars()}
             </div>
         )
     }
 }
-console.log(mergeSort([13,12,5,0,-1]));
 
-export default BarContainer
+const mapStateToProps = state => ({
+    array: state.array.items
+})
+
+
+export default connect(mapStateToProps, { randomArray })(BarContainer);

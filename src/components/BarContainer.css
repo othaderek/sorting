@@ -1,0 +1,6 @@
+.bar {
+    display: inline-block;
+    justify-content: center;
+    align-items: row;
+    margin: 2px;
+}
